@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Blogger Dark Mode Global",
+  "version": "1.0",
+  "description": "Modo oscuro global para Blogger con filtro y popup glass",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.blogger.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.blogger.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Blogger Dark Mode",
+     "default_icon": {
+      "128": "icons/icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icons/icon.png"
+  }
+}

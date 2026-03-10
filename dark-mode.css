@@ -1,0 +1,46 @@
+/* ============================================
+   Dark Mode - Activado por clase en body
+   ============================================ */
+
+body.dark-mode-active {
+  filter: invert(1) hue-rotate(180deg);
+  background-color: #fff;
+}
+
+body.dark-mode-active img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Restauración de editores cuando el modo oscuro está activo */
+body.dark-mode-active .CodeMirror,
+body.dark-mode-active [class*="code-mirror"],
+body.dark-mode-active [class*="CodeMirror"],
+body.dark-mode-active .html-editor {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Forzar fondos blancos (se invertirán a negro) solo cuando el modo oscuro está activo */
+body.dark-mode-active,
+body.dark-mode-active html,
+body.dark-mode-active .dashboard,
+body.dark-mode-active .main-content,
+body.dark-mode-active .content,
+body.dark-mode-active .card,
+body.dark-mode-active .panel,
+body.dark-mode-active .widget,
+body.dark-mode-active .sidebar,
+body.dark-mode-active .header,
+body.dark-mode-active .footer,
+body.dark-mode-active [role="main"],
+body.dark-mode-active [role="complementary"],
+body.dark-mode-active [role="banner"],
+body.dark-mode-active table,
+body.dark-mode-active .table,
+body.dark-mode-active .table-striped,
+body.dark-mode-active .table-striped tbody tr,
+body.dark-mode-active .post-list,
+body.dark-mode-active .entry-list,
+body.dark-mode-active .post-item,
+body.dark-mode-active .entry-card {
+  background-color: #ffffff !important;
+}
